@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './public/send.js',
+  entry: './public/js/tabs.js',
 
   output: {
     path: path.resolve('./public/js'),
