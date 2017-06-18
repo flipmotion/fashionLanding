@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>index</title>
     <meta name="viewport" content="width=1200">
-    <link rel="SHORTCUT ICON" href="http://airq.ru/favicon.ico" type="image/x-icon">
+    <link rel="SHORTCUT ICON" href="#favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./public/styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./public/styles/css">
     <link rel="stylesheet" type="text/css" href="./public/styles/font-awesome.min.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="./public/styles/changes.css">
     <link rel="stylesheet" type="text/css" href="./public/styles/adapt.css">
     <script src="./public/js/watch.js" type="text/javascript" async=""></script>
-    <script src="./public/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="./public/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="./public/js/jquery.bxslider.min.js" type="text/javascript"></script>
     <script src="./public/js/jquery.viewportchecker.min.js" type="text/javascript"></script>
     <script src="./public/js/text-slider.js" type="text/javascript"></script>
@@ -24,13 +24,30 @@
     <script src="./public/js/tabs.js" type="text/javascript"></script>
     <script src="./public/js/feedslider.js" type="text/javascript"></script>
     <script src="./public/js/forms.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $(".vp-check").viewportChecker();
+          $('.main-menu,.footer-nav').find('a[href*="#"]:not([href="#"])').click(function () {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                      $('html, body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
+    </script>
   </head>
     <body>
         <div class="wrapper">
             <div class="block-wrap header-block-wrap vp-check full-visible" data-vp-add-class="animated fadeIn" data-vp-remove-class="hide-before-animate">
                 <div class="block-wrap-1440">
                     <header>
-                        <a class="logo" href="http://airq.ru/ns/">
+                        <a class="logo" href="#ns/">
                             <img src="./public/images/logo.png">
                         </a>
                         <div class="phone-wrap">
@@ -49,15 +66,15 @@
                     <div class="main-menu-wrap">
                         <nav class="main-menu">
                             <ul>
-                                <li class="home"><a href="http://airq.ru/#">&nbsp;</a></li>
-                                <li><a href="http://airq.ru/#about">О компании</a></li>
-                                <li><a href="http://airq.ru/#production">Услуги</a></li>
-                                <li><a href="http://airq.ru/#production">Продукция</a></li>
-                                <li><a href="http://airq.ru/#about">Ароматы</a></li>
-                                <li><a href="http://airq.ru/#technologies">Оборудование</a></li>
-                                <li><a href="http://airq.ru/#technologies">Технология</a></li>
-                                <li><a href="http://airq.ru/#clients">Клиенты</a></li>
-                                <li><a href="http://airq.ru/#contacts">Контакты</a></li>
+                                <li class="home"><a href="#">&nbsp;</a></li>
+                                <li><a href="#about">О компании</a></li>
+                                <li><a href="#production">Услуги</a></li>
+                                <li><a href="#production">Продукция</a></li>
+                                <li><a href="#about">Ароматы</a></li>
+                                <li><a href="#technologies">Оборудование</a></li>
+                                <li><a href="#technologies">Технология</a></li>
+                                <li><a href="#clients">Клиенты</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -81,15 +98,15 @@
                                 </p>
                             </div>
                             <div class="button-wrap">
-                                <a class="black-button" id="js-show-form2" href="http://airq.ru/#">Оставить заявку</a>
+                                <a class="black-button" id="js-show-form2" href="#">Оставить заявку</a>
                             </div>
                         </div>
                         <div class="form2-wrap" id="js-form2">
                             <div class="all-shadow"></div>
                             <div class="form-form">
-                                <a href="http://airq.ru/#" class="form2-close" id="js-close-form2"><i class="fa fa-times"></i></a>
+                                <a href="#" class="form2-close" id="js-close-form2"><i class="fa fa-times"></i></a>
                                 <div class="title">Рассчитайте стоимость своего проекта по аромамаркетингу</div>
-                                <form action="http://airq.ru/php/send.php" method="POST">
+                                <form action="#php/send.php" method="POST">
                                     <div class="form-field">
                                         <input name="name" type="text" required="" placeholder="Ваше имя">
                                     </div>
@@ -105,7 +122,7 @@
                                 </form>
                             </div>
                             <div class="form-success">
-                                <a href="http://airq.ru/#" class="form-success-close"><i class="fa fa-times"></i></a>
+                                <a href="#" class="form-success-close"><i class="fa fa-times"></i></a>
                                 <div class="text-big">
                                     Ваша заявка отправлена.
                                 </div>
@@ -120,47 +137,42 @@
             <div class="block-wrap text-slider-block-wrap vp-check full-visible" data-vp-add-class="animated fadeIn" data-vp-remove-class="hide-before-animate">
                 <div class="block-wrap-1140">
                     <div class="text-slider-wrap" id="js-text-slider-wrap">
-                        <div class="bx-wrapper" style="max-width: 100%;">
-                          <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 240px;">
-                            <ul class="text-slider" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-1080px, 0px, 0px);">
-                              <li style="float: left; list-style: none; position: relative; width: 1080px;" class="bx-clone">
+                        <div class="bx-wrapper">
+                          <div class="bx-viewport">
+                            <ul class="text-slider">
+                              <li class="bx-clone">
                                 <div class="text-slider-item">Проектируем арома бренды и доносим преимущества компании на бессознательном уровне</div>
                               </li>
-                              <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                              <li>
                                   <div class="text-slider-item">
                                       Создаем коммерчески успешные <br>ароматы-бестселлеры
                                   </div>
                               </li>
-                              <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                              <li>
                                   <div class="text-slider-item">
                                       Ароматизируем пространство для достижения маркетинговых целей
                                   </div>
                               </li>
-                              <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                              <li>
                                   <div class="text-slider-item">
                                       Проектируем арома бренды и доносим преимущества компании на бессознательном уровне
                                   </div>
                               </li>
-                              <li style="float: left; list-style: none; position: relative; width: 1080px;" class="bx-clone">
-                                <div class="text-slider-item">
-                                    Создаем коммерчески успешные <br>ароматы-бестселлеры
-                                </div>
-                              </li>
                             </ul>
                           </div>
                         <div class="bx-controls"></div></div>
-                        <a href="http://airq.ru/#" class="text-slider-prev" id="js-text-slider-prev"></a>
-                        <a href="http://airq.ru/#" class="text-slider-next" id="js-text-slider-next"></a>
+                        <a href="#" class="text-slider-prev" id="js-text-slider-prev"></a>
+                        <a href="#" class="text-slider-next" id="js-text-slider-next"></a>
                         <div class="text-slider-pager" id="js-text-slider-pager">
                           <!-- <div class="bx-pager bx-default-pager">
                             <div class="bx-pager-item">
-                              <a href="http://airq.ru/" data-slide-index="0" class="bx-pager-link active">1</a>
+                              <a href="#" data-slide-index="0" class="bx-pager-link active">1</a>
                             </div>
                             <div class="bx-pager-item">
-                              <a href="http://airq.ru/" data-slide-index="1" class="bx-pager-link">2</a>
+                              <a href="#" data-slide-index="1" class="bx-pager-link">2</a>
                             </div>
                             <div class="bx-pager-item">
-                              <a href="http://airq.ru/" data-slide-index="2" class="bx-pager-link">3</a>
+                              <a href="#" data-slide-index="2" class="bx-pager-link">3</a>
                             </div>
                           </div> -->
                         </div>
@@ -339,23 +351,9 @@
                 </div>
                 <div class="slider2-wrap">
                     <div class="slider2">
-                        <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 652px;"><ul id="js-slider2" style="width: 815%; position: relative; transition-duration: 0s; transform: translate3d(-1392px, 0px, 0px);"><li data-bxpager-text="№1 в своем&lt;br /&gt;деле" style="float: left; list-style: none; position: relative; width: 1392px;" class="bx-clone">
-                                <div class="text" style="top: 82px;width: 475px;margin-left: -572px;">
-                                    <div class="title" style="font-size: 46px;margin-bottom: 34px;">№1 в своем деле </div>
-                                    <!-- /.title -->
-                                    <div class="small">
-                                        <div class="list-item"><strong>Более 85000 активных инсталляций</strong> арома оборудования в <strong>107 странах</strong></div>
-                                        <div class="list-item"><strong>Собственный R&amp;D центр</strong> в США и 10 млн долларов инвестиций в совершенствование технологий</div>
-                                        <div class="list-item"><strong>24 патента</strong> на способ ароматизации пространств и конструкцию арома картриджей</div>
-                                        <div class="list-item"><strong>17</strong> созданных нашей командой <strong>парфюмов
-                                                стали мировыми бестселлерами</strong></div>
-                                        <div class="list-item"><strong>Все ароматы</strong> нашей коллекции <strong>проходят
-                                                экспертизу</strong> мирового лидера в производстве ароматического сырья – <a href="http://www.firmenich.com/en_INT/index.html" target="_blank">Firmenich</a></div>
-                                    </div>
-                                    <!-- /.small -->
-                                </div>
-                                <img src="./public/images/6.jpg"></li>
-                            <li data-bxpager-text="Нам доверяют&lt;br /&gt;во всем мире" style="float: left; list-style: none; position: relative; width: 1392px;">
+                        <div class="bx-wrapper"><div class="bx-viewport">
+                          <ul id="js-slider2">
+                            <li data-bxpager-text="Нам доверяют&lt;br /&gt;во всем мире">
                                 <div class="text" style="top: 187px;width: 460px;margin-left: -580px;">
                                     <div class="title">Нам доверяют во всем мире!</div>
                                     85 000 инсталляций оборудования по всему миру: Armani, Tezenis, Citibank, Disney, Mariott,
@@ -363,7 +361,7 @@
                                 </div>
                                 <img src="./public/images/1.jpg">
                             </li>
-                            <li data-bxpager-text="17 парфюмов-&lt;br /&gt;бестселлеров" style="float: left; list-style: none; position: relative; width: 1392px;">
+                            <li data-bxpager-text="17 парфюмов-&lt;br /&gt;бестселлеров">
                                 <div class="text" style="top: 146px;width: 400px;margin-left: -580px;">
                                     <div class="title">17 разработанных нами парфюмов стали мировыми бестселлерами:</div>
                                     <!-- /.title -->
@@ -372,7 +370,7 @@
                                 </div>
                                 <!-- /.text -->
                                 <img src="./public/images/2.jpg"></li>
-                            <li data-bxpager-text="Команда&lt;br /&gt;профи" style="float: left; list-style: none; position: relative; width: 1392px;">
+                            <li data-bxpager-text="Команда&lt;br /&gt;профи">
                                 <div class="text" style="top: 134px;width: 429px;margin-left: -580px;line-height: 36px;">
                                     В нашей команде  – как эксперты с мировым именем, так и титулованные российские специалисты, понимающие специфику рынка России и СНГ.
                                     <div class="small" style="margin-top: 26px;line-height: 34px;">
@@ -386,7 +384,7 @@
                                 </div>
                                 <!-- /.text -->
                                 <img src="./public/images/3.jpg"></li>
-                            <li data-bxpager-text="Мы знаем,&lt;br /&gt;что вам нужно" style="float: left; list-style: none; position: relative; width: 1392px;">
+                            <li data-bxpager-text="Мы знаем,&lt;br /&gt;что вам нужно">
                                 <div class="text" style="top: 167px;width: 524px;margin-left: -580px;">
                                     <div class="title">Наша команда успешно реализовала уже более 500 проектов в России и более 10 000 по всему миру. </div>
                                     <!-- /.title -->
@@ -395,7 +393,7 @@
                                 </div>
                                 <!-- /.text -->
                                 <img src="./public/images/4.jpg"></li>
-                            <li data-bxpager-text="Пилотный&lt;br /&gt;проект" style="float: left; list-style: none; position: relative; width: 1392px;">
+                            <li data-bxpager-text="Пилотный&lt;br /&gt;проект">
                                 <div class="text" style="top: 144px;width: 524px;margin-left: -580px;">
                                     <div class="title">Не понимаете, что даст аромамаркетинг конкретно вашей компании? Попробуйте пилотный проект.</div>
                                     <!-- /.title -->
@@ -406,7 +404,7 @@
                                 </div>
                                 <!-- /.text -->
                                 <img src="./public/images/5.jpg"></li>
-                            <li data-bxpager-text="№1 в своем&lt;br /&gt;деле" style="float: left; list-style: none; position: relative; width: 1392px;">
+                            <li data-bxpager-text="№1 в своем&lt;br /&gt;деле">
                                 <div class="text" style="top: 82px;width: 475px;margin-left: -572px;">
                                     <div class="title" style="font-size: 46px;margin-bottom: 34px;">№1 в своем деле </div>
                                     <!-- /.title -->
@@ -422,16 +420,9 @@
                                     <!-- /.small -->
                                 </div>
                                 <img src="./public/images/6.jpg"></li>
-                        <li data-bxpager-text="Нам доверяют&lt;br /&gt;во всем мире" style="float: left; list-style: none; position: relative; width: 1392px;" class="bx-clone">
-                                <div class="text" style="top: 187px;width: 460px;margin-left: -580px;">
-                                    <div class="title">Нам доверяют во всем мире!</div>
-                                    85 000 инсталляций оборудования по всему миру: Armani, Tezenis, Citibank, Disney, Mariott,
-                                    Mercedes-Benz, Samsung.
-                                </div>
-                                <img src="./public/images/1.jpg">
-                            </li></ul></div><div class="bx-controls"></div></div>
+                        </ul></div><div class="bx-controls"></div></div>
                     </div>
-                    <div class="slider2-pager" id="js-slider2-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="0" class="bx-pager-link active">Нам доверяют<br>во всем мире</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="1" class="bx-pager-link">17 парфюмов-<br>бестселлеров</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="2" class="bx-pager-link">Команда<br>профи</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="3" class="bx-pager-link">Мы знаем,<br>что вам нужно</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="4" class="bx-pager-link">Пилотный<br>проект</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="5" class="bx-pager-link">№1 в своем<br>деле</a></div></div></div>
+                    <div class="slider2-pager" id="js-slider2-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="#" data-slide-index="0" class="bx-pager-link active">Нам доверяют<br>во всем мире</a></div><div class="bx-pager-item"><a href="#" data-slide-index="1" class="bx-pager-link">17 парфюмов-<br>бестселлеров</a></div><div class="bx-pager-item"><a href="#" data-slide-index="2" class="bx-pager-link">Команда<br>профи</a></div><div class="bx-pager-item"><a href="#" data-slide-index="3" class="bx-pager-link">Мы знаем,<br>что вам нужно</a></div><div class="bx-pager-item"><a href="#" data-slide-index="4" class="bx-pager-link">Пилотный<br>проект</a></div><div class="bx-pager-item"><a href="#" data-slide-index="5" class="bx-pager-link">№1 в своем<br>деле</a></div></div></div>
                 </div>
             </div>
             <div class="block-wrap tabs-block-wrap vp-check" data-vp-add-class="animated fadeIn" data-vp-remove-class="hide-before-animate">
@@ -612,7 +603,10 @@
                     </div>
                     <div class="feedslider-wrap" id="js-feedslider-wrap">
                         <div class="feedslider">
-                            <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 353px;"><ul style="width: 615%; position: relative; transition-duration: 0s; transform: translate3d(-4320px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 1080px;" class="bx-clone">
+                            <div class="bx-wrapper">
+                              <div class="bx-viewport">
+                                <ul>
+                                  <li class="bx-clone">
                                     <div class="feedslider-item">
                                         <div class="img">
                                             <img src="./public/images/okey.png">
@@ -635,7 +629,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                                <li>
                                     <div class="feedslider-item">
                                         <div class="img">
                                             <img src="./public/images/vremena.png">
@@ -654,7 +648,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                                <li>
                                     <div class="feedslider-item">
                                         <div class="img">
                                             <img src="./public/images/kino.png">
@@ -675,7 +669,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                                <li">
                                     <div class="feedslider-item">
                                         <div class="img">
                                             <img src="./public/images/azbuka.png">
@@ -696,7 +690,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li style="float: left; list-style: none; position: relative; width: 1080px;">
+                                <li>
                                     <div class="feedslider-item">
                                         <div class="img">
                                             <img src="./public/images/okey.png">
@@ -719,7 +713,7 @@
                                         </div>
                                     </div>
                                 </li>
-                            <li style="float: left; list-style: none; position: relative; width: 1080px;" class="bx-clone">
+                            <li class="bx-clone">
                                     <div class="feedslider-item">
                                         <div class="img">
                                             <img src="./public/images/vremena.png">
@@ -739,9 +733,9 @@
                                     </div>
                                 </li></ul></div><div class="bx-controls"></div></div>
                         </div>
-                        <a href="http://airq.ru/#" class="feedslider-next-prev feedslider-prev" id="js-feedslider-prev"></a>
-                        <a href="http://airq.ru/#" class="feedslider-next-prev feedslider-next" id="js-feedslider-next"></a>
-                        <div class="feedslider-pager" id="js-feedslider-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="http://airq.ru/" data-slide-index="3" class="bx-pager-link active">4</a></div></div></div>
+                        <a href="#" class="feedslider-next-prev feedslider-prev" id="js-feedslider-prev"></a>
+                        <a href="#" class="feedslider-next-prev feedslider-next" id="js-feedslider-next"></a>
+                        <div class="feedslider-pager" id="js-feedslider-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="#" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="#" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="#" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="#" data-slide-index="3" class="bx-pager-link active">4</a></div></div></div>
                     </div>
                 </div>
             </div>
@@ -897,7 +891,7 @@
             <div id="contacts" class="block-wrap footer-block-wrap vp-check" data-vp-add-class="animated fadeIn" data-vp-remove-class="hide-before-animate">
                 <div class="block-wrap-1440">
                     <footer>
-                        <a href="http://airq.ru/" class="logo">
+                        <a href="#" class="logo">
                             <img src="./public/images/footer_logo.png">
                         </a>
                         <div class="copyright">
@@ -915,14 +909,14 @@
                         </div>
                         <nav class="footer-nav">
                             <ul>
-                                <li><a href="http://airq.ru/#about">О компании</a></li>
-                                <li><a href="http://airq.ru/#production">Услуги</a></li>
-                                <li><a href="http://airq.ru/#production">Продукция</a></li>
-                                <li><a href="http://airq.ru/#about">Ароматы</a></li>
-                                <li><a href="http://airq.ru/#technologies">Оборудование</a></li>
-                                <li><a href="http://airq.ru/#technologies">Технология</a></li>
-                                <li><a href="http://airq.ru/#clients">Клиенты</a></li>
-                                <li><a href="http://airq.ru/#contacts">Контакты</a></li>
+                                <li><a href="#about">О компании</a></li>
+                                <li><a href="#production">Услуги</a></li>
+                                <li><a href="#production">Продукция</a></li>
+                                <li><a href="#about">Ароматы</a></li>
+                                <li><a href="#technologies">Оборудование</a></li>
+                                <li><a href="#technologies">Технология</a></li>
+                                <li><a href="#clients">Клиенты</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
                             </ul>
                         </nav>
                     </footer>
