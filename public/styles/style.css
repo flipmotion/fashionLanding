@@ -126,7 +126,7 @@ nav.main-menu ul li:last-child::after{
 }
 
 nav.main-menu ul li.home a{
-    background: url(../images/icons/home.png) no-repeat left 17px;
+    background: url(../images/home.png) no-repeat left 17px;
     width: 14px;
 }
 nav.main-menu ul li a{
