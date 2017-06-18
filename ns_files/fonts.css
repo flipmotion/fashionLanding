@@ -1,0 +1,47 @@
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Roboto Condensed', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
+body,
+.icons2-block-wrap .icons2-list-wrap,
+.slider2-block-wrap .slider2-wrap .slider2-pager,
+.tabs-block-wrap .tabs-content-wrap .tabs-content-item .text-wrap,
+.text2-block-wrap .text2-inner-wrap .text2-text-wrap,
+.more-block-wrap .link-wrap .link a,
+.icons1-block-wrap
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+.text1-block-wrap,
+.icons2-block-wrap .text-wrap .text,
+.slider2-block-wrap .title-wrap .title,
+.tabs-block-wrap .title-wrap .title,
+.text2-block-wrap .title-wrap .title,
+.feedslider-block-wrap .title-wrap .title,
+.gallery-block-wrap .title-wrap .title,
+.smi-block-wrap .title-wrap .title,
+.form-block-wrap .title-wrap .title,
+.form-block-wrap .form-wrap .form-success,
+.form2-wrap .form-form .title,
+.slider-block-wrap
+{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav.main-menu,
+.feedslider-block-wrap .feedslider-wrap .feedslider ul li .feedslider-item .title,
+.form-wrap .form-form .form-column-wrap .form-column input,
+.more-block-wrap .read-more-wrap .read-more a,
+.footer-block-wrap footer,
+.form2-wrap .form-form,
+.form-block-wrap .form-wrap .form-form .submit-wrap .form-submit,
+.black-button
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.feedslider-block-wrap .feedslider-wrap .feedslider ul li .feedslider-item .text{
+    font-family: Arial;
+}

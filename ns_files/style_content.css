@@ -1,0 +1,187 @@
+﻿/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+.content_general {
+    color: #5e2a17;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+.content_general p{
+    color: #5e2a17;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.content_general .Big{/*Увеличеный шрифт*/
+    font-size: 30px;
+}
+
+.content_general span {
+    /*color: #a61e1e;*/
+}
+.content_general span.like-h1,
+.content_general h1{
+    font-size: 24px;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin: 20px 0;
+    font-weight: normal;
+}
+.content_general h2{
+    font-weight: bold;
+    color: #5e2a17;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.content_general h3 {
+    font-size: 36px;
+    color: #000000;
+    font-weight: normal;
+    line-height: normal;
+}
+.content_general h3 {
+    font-size: 32px;
+}
+
+.content_general a {
+}
+.content_general a:hover {
+}
+
+.content_general div.YMaps img{
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* Стили общие */
+.content_general ul, .content_general ol{
+}
+
+.content_general ul{
+}
+
+.content_general ol {
+}
+
+
+.content_general .bordo{/*Бордовый шрифт*/
+    color: #a61e1e;
+}
+
+.content_general .BigRed{/*Красный большой шрифт*/
+    color: #ff0000;
+    font-size: 32px;
+}
+
+.content_general .Big{/*Большой шрифт*/
+    font-size: 32px;
+}
+
+.content_general .Green{/*Зеленый шрифт*/
+    color: #00ff00;
+}
+
+.content_general .BigGreen{/*Большой зеленый шрифт*/
+    color: #00ff00;
+    font-size: 32px;
+}
+
+.content_general .BigRedOnGreen{/*Большой красный по зеленому шрифт*/
+    color: #ff0000;
+    background-color: #00ff00;
+    font-size: 32px;
+}
+.content_general a.send{/*красная ссылка*/
+    color: #a61e1e;
+    text-decoration: none;
+}
+.content_general a.send:hover{/*красная ссылка*/
+    text-decoration: underline;
+}
+
+
+
+
+/*  Super Awesome Buttons with CSS3 and RGBA
+    Source: http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
+*/
+.awesome, .awesome:visited {
+    /*background: #222 url(alert-overlay.png) repeat-x !important;*/
+    background-color: #222 !important;
+    display: inline-block !important;
+    padding: 5px 10px 6px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    border-radius: 5px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25) !important;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.25) !important;
+    position: relative !important;
+    cursor: pointer !important;
+}
+
+.awesome:hover							{ background-color: #111 !important;}
+.awesome:active							{ top: 1px !important; }
+.small.awesome, .small.awesome:visited 			{ font-size: 11px !important;}
+.awesome, .awesome:visited,
+.medium.awesome, .medium.awesome:visited 		{ font-size: 13px !important;}
+.large.awesome, .large.awesome:visited 			{ font-size: 14px !important; padding: 8px 14px 9px !important;}
+
+.green.awesome, .green.awesome:visited		{ background-color: #91bd09 !important;}
+.green.awesome:hover						{ background-color: #749a02 !important;}
+.blue.awesome, .blue.awesome:visited		{ background-color: #2daebf !important;}
+.blue.awesome:hover							{ background-color: #007d9a !important;}
+.red.awesome, .red.awesome:visited			{ background-color: #e33100 !important;}
+.red.awesome:hover							{ background-color: #872300 !important;}
+.magenta.awesome, .magenta.awesome:visited		{ background-color: #a9014b !important;}
+.magenta.awesome:hover							{ background-color: #630030 !important;}
+.orange.awesome, .orange.awesome:visited		{ background-color: #ff5c00 !important;}
+.orange.awesome:hover							{ background-color: #d45500 !important;}
+.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515 !important;}
+.yellow.awesome:hover							{ background-color: #fc9200 !important;}
+.gray.awesome, .gray.awesome:visited		{ background-color: #b4b4b7 !important;}
+.gray.awesome:hover							{ background-color: #a5a1a4 !important;}
+
+
+.content_general {
+    max-width: 100%;
+}
+.content_general table {
+    max-width: 100%;
+}
+.content_general table tbody {
+    max-width: 100%;
+}
+.content_general table tr {
+    max-width: 100%;
+}
+.content_general table tr td {
+    vertical-align: top;
+}
+.content_general img,
+.content_general table img {
+    max-width: 100%;
+    /*width: 2000px;*/
+}
+
+html.small .content_general img,
+html.small .content_general table img {
+    /*width: 100% !important;*/
+}
+
+
+
+
+
+
+
+
+
+
+
